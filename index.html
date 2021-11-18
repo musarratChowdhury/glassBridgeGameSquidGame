@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GamePage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section class="header"></section>
+    <!--  -->
+    <!-- gameover screen -->
+    <section class="gameover-screen hide">
+      <h2 class="gameover-text">Game Over</h2>
+      <h3 class="gameover-text">Try again?</h3>
+      <button id="restart-btn">Restart</button>
+    </section>
+    <!-- game -body -->
+    <section class="game-body">
+      <!-- game - Title -->
+      <article class="game-title">
+        <h2 class="game-title-text">Glass Bridge Game</h2>
+      </article>
+      <!-- game Timer -->
+      <div class="game-timer">
+        <h4 id="timer">Time : 20sec</h4>
+      </div>
+      <!-- instructions -->
+      <div class="instructions">
+        <h5 id="instruction-text">Some instructions pop up</h5>
+      </div>
+      <!-- main game area -->
+      <div class="game-area">
+        <div class="start">
+          <h3 class="start-text">
+            <p>S</p>
+            <p>T</p>
+            <p>A</p>
+            <p>R</p>
+            <p>T</p>
+          </h3>
+
+          <!-- player icon -->
+          <span class="player-start-position">
+            <span class="player-icon"></span>
+          </span>
+        </div>
+        <!-- glass tiles -->
+        <div class="glass-tiles-container">
+          <div class="glass-tile" id="glass-tile-top" data-value="1"></div>
+          <div class="glass-tile" id="glass-tile-top" data-value="3"></div>
+          <div class="glass-tile" id="glass-tile-top" data-value="5"></div>
+          <div class="glass-tile" id="glass-tile-top" data-value="7"></div>
+          <div class="glass-tile" id="glass-tile-top" data-value="9"></div>
+          <div class="glass-tile" id="glass-tile-top" data-value="11"></div>
+          <div class="glass-tile" id="glass-tile-top" data-value="13"></div>
+          <div class="glass-tile" id="glass-tile-bot" data-value="2"></div>
+          <div class="glass-tile" id="glass-tile-bot" data-value="4"></div>
+          <div class="glass-tile" id="glass-tile-bot" data-value="6"></div>
+          <div class="glass-tile" id="glass-tile-bot" data-value="8"></div>
+          <div class="glass-tile" id="glass-tile-bot" data-value="10"></div>
+          <div class="glass-tile" id="glass-tile-bot" data-value="12"></div>
+          <div class="glass-tile" id="glass-tile-bot" data-value="14"></div>
+        </div>
+        <!-- ends glass tiles -->
+        <div class="finish">
+          <span class="player-end-position">
+            <span class="end-position">EE</span>
+          </span>
+          <h3 class="finish-text">
+            <p>F</p>
+            <p>I</p>
+            <p>N</p>
+            <p>I</p>
+            <p>S</p>
+            <p>H</p>
+          </h3>
+        </div>
+      </div>
+      <!-- end main game area -->
+      <!-- lives count -->
+      <div class="lives">
+        <h4 class="lives-count">Lives left : 3</h4>
+      </div>
+      <!-- ends lives count -->
+    </section>
+    <!--  -->
+    <section class="footer"></section>
+  </body>
+</html>

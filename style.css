@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* border: 1px dashed white; */
+}
+:root {
+  /* variables */
+  --tile-size: 100px;
+  --gapsize: 10px;
+  --start-finish-padding: 5px;
+  --start-finish-font-size: 20px;
+  --player-icon-size: 25px;
+  --instruction-font-size: 25px;
+  --game-timer-font-size: 30px;
+  --game-title-font-size: 35px;
+
+  --body-background-color: rgb(39, 46, 68);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: var(--body-background-color);
+  font-family: "Courier New", Courier, monospace;
+}
+.gameover-screen {
+  display: grid;
+  justify-content: center;
+  margin-top: 250px;
+}
+.gameover-text {
+  font-size: var(--game-title-font-size);
+}
+#restart-btn {
+  background-color: tan;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+#restart-btn:hover {
+  background-color: rgb(83, 50, 7);
+  color: white;
+}
+.game-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-title-text {
+  font-size: var(--game-title-font-size);
+  text-align: center;
+}
+.game-timer {
+  font-size: var(--game-timer-font-size);
+  text-align: right;
+  padding-right: 20px;
+}
+.instructions {
+  font-size: var(--instruction-font-size);
+  text-align: center;
+}
+/* the styling of the rectangular tiles */
+
+.glass-tile {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--tile-size);
+  background-color: #336997;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.hide {
+  display: none;
+}
+
+#glass-tile-top {
+  align-self: flex-end;
+  margin-bottom: 2.5px;
+}
+#glass-tile-bot {
+  align-self: flex-start;
+  margin-top: 2.5px;
+}
+/* glass grid */
+.glass-tiles-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gapsize);
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(7, 1fr);
+}
+.game-area {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+}
+.start,
+.finish {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+.start,
+.finish {
+  padding: 10px;
+  cursor: pointer;
+}
+.start {
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 7px solid rgb(224, 11, 11);
+}
+.finish {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 7px solid rgb(11, 207, 77);
+}
+.start-text,
+.finish-text {
+  text-align: center;
+  font-size: var(--start-finish-font-size);
+
+  padding: 5px;
+}
+.start-text {
+  margin-right: 5px;
+}
+.finish-text {
+  margin-left: 5px;
+}
+.player-start-position {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.player-end-position {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.player-icon {
+  width: var(--player-icon-size);
+  height: var(--player-icon-size);
+  background-color: rgb(238, 96, 238);
+  border-radius: 50%;
+}
+.lives {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--game-timer-font-size);
+}
+/* media query for smaller and bigger screens */
+@media screen and (min-width: 1200px) {
+  :root {
+    --tile-size: 150px;
+    --gapsize: 15px;
+    --start-finish-padding: 10px;
+    --start-finish-font-size: 25px;
+    --player-icon-size: 30px;
+    --instruction-font-size: 30px;
+    --game-timer-font-size: 35px;
+    --game-title-font-size: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  :root {
+    --tile-size: 150px;
+    --gapsize: 6px;
+    --start-finish-padding: 0px;
+    --start-finish-font-size: 14px;
+    --player-icon-size: 18px;
+    --instruction-font-size: 20px;
+    --game-timer-font-size: 25px;
+    --game-title-font-size: 30px;
+  }
+}
