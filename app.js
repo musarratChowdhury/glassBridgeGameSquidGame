@@ -6,8 +6,11 @@ var player = document.querySelector(".player-icon");
 var startPosition = document.querySelector(".player-start-position");
 var instruction = document.getElementById("instruction-text");
 var gameoverScreen = document.querySelector(".gameover-screen");
+var gameoverText = document.querySelector(".gameover-text");
 var gameBody = document.querySelector(".game-body");
 var restartBtn = document.getElementById("restart-btn");
+var endPosition = document.querySelector(".player-end-position");
+var endPositionHolder = document.querySelector(".end-position");
 //global variables
 var time = 20;
 var randomLosingTiles = [];
@@ -68,7 +71,7 @@ glassTiles.forEach((tile) => {
     ) {
       console.log("previous tile set was cleared");
       previousTileCleared = true;
-      if (i == 1) startPosition.removeChild(player);
+      // if (i == 1) startPosition.removeChild(player);
 
       if (i != 1) previousTile.removeChild(player);
       // checking if it is a losing tile
@@ -125,7 +128,15 @@ glassTiles.forEach((tile) => {
 restartBtn.addEventListener("click", () => {
   window.location = "./";
 });
-
+//To win the game
+endPosition.addEventListener("click", () => {
+  if (i >= 8 && !gameover) {
+    console.log("Win");
+    endPosition.removeChild(endPositionHolder);
+    endPosition.appendChild(player);
+    winGame();
+  }
+});
 //helpful functions
 function getRandom(min, max) {
   max++; //since the max value is not included
@@ -139,5 +150,10 @@ function movePlayer(tile) {
 }
 function gameOver() {
   gameBody.classList.add("hide");
+  gameoverScreen.classList.remove("hide");
+}
+function winGame() {
+  gameBody.classList.add("hide");
+  gameoverText.innerText = "You Won!";
   gameoverScreen.classList.remove("hide");
 }

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GamePage</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5ddff50c61.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -14,7 +18,7 @@
     <!-- gameover screen -->
     <section class="gameover-screen hide">
       <h2 class="gameover-text">Game Over</h2>
-      <h3 class="gameover-text">Try again?</h3>
+
       <button id="restart-btn">Restart</button>
     </section>
     <!-- game -body -->
@@ -29,7 +33,7 @@
       </div>
       <!-- instructions -->
       <div class="instructions">
-        <h5 id="instruction-text">Some instructions pop up</h5>
+        <h5 id="instruction-text">Jump over all the glass tiles to win!</h5>
       </div>
       <!-- main game area -->
       <div class="game-area">
@@ -67,7 +71,7 @@
         <!-- ends glass tiles -->
         <div class="finish">
           <span class="player-end-position">
-            <span class="end-position">EE</span>
+            <span class="end-position"><i class="fas fa-gem"></i></span>
           </span>
           <h3 class="finish-text">
             <p>F</p>
