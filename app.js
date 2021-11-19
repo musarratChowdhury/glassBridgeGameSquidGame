@@ -163,7 +163,8 @@ endPosition.addEventListener("click", () => {
   }
 });
 //
-//helpful functions
+//Helper Functions::
+
 function getRandom(min, max) {
   max++; //since the max value is not included
   return Math.floor(Math.random() * (max - min)) + min;
