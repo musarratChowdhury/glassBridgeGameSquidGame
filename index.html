@@ -7,9 +7,15 @@
     <title>GamePage</title>
     <link rel="stylesheet" href="style.css" />
     <script
-      src="https://kit.fontawesome.com/5ddff50c61.js"
+      src="https://kit.fontawesome.com/9d8ddca57b.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -28,7 +34,15 @@
         <h2 class="game-title-text">Glass Bridge Game</h2>
       </article>
       <!-- game Timer -->
+
       <div class="game-timer">
+        <div class="audio-control">
+          <span class="audio-btn">
+            <i class="fas fa-volume-up" id="audio-btn"></i>
+          </span>
+        </div>
+
+        <button class="start-btn" id="start-btn">START GAME</button>
         <h4 id="timer">Time : 20sec</h4>
       </div>
       <!-- instructions -->
